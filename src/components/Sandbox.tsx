@@ -30,17 +30,17 @@ export function Sandbox() {
     };
 
     return (
-        <section className="flex-1 min-w-[450px] flex flex-col bg-violet-950 z-0">
+        <section className="flex-1 min-w-[450px] flex flex-col bg-zinc-50 z-0">
             {/* Top Control Bar */}
-            <div className="p-4 border-b border-zinc-800 bg-[#4c1d95] flex flex-col xl:flex-row xl:items-center justify-between gap-4 shrink-0 shadow-sm z-10">
+            <div className="p-4 border-b border-zinc-200 bg-white flex flex-col xl:flex-row xl:items-center justify-between gap-4 shrink-0 shadow-sm z-10">
                 <div className="flex flex-wrap items-center gap-3">
-                    <span className="text-sm font-semibold text-zinc-300 flex items-center shrink-0">
+                    <span className="text-sm font-semibold text-zinc-700 flex items-center shrink-0">
                         <Monitor className="w-4 h-4 mr-1.5" />沙箱
                     </span>
                     <select 
                         value={sandboxSize}
                         onChange={(e) => setSandboxSize(e.target.value)}
-                        className="text-xs border border-zinc-700 bg-[#5b21b6] rounded-md px-2.5 py-1.5 outline-none focus:border-violet-500 transition-colors text-zinc-300 cursor-pointer"
+                        className="text-xs border border-zinc-200 bg-zinc-50 rounded-md px-2.5 py-1.5 outline-none focus:border-violet-500 transition-colors text-zinc-700 cursor-pointer"
                     >
                         <option value="100%">自适应 (Responsive)</option>
                         <option value="1920x1080">PC (1920x1080)</option>
@@ -50,7 +50,7 @@ export function Sandbox() {
                     <button 
                         onClick={handleTogglePicker}
                         className={`text-xs border px-3 py-1.5 rounded-md transition-all flex items-center font-medium shadow-sm active:scale-95 ${
-                            pickingMode ? 'bg-violet-600 text-white border-violet-600' : 'text-violet-400 border-violet-900/50 bg-violet-900/20 hover:bg-violet-900/40'
+                            pickingMode ? 'bg-violet-600 text-white border-violet-600' : 'text-violet-700 border-violet-200 bg-violet-50 hover:bg-violet-100'
                         }`}
                         title="开启后在 iframe 中点击元素自动拾取选择器"
                     >
@@ -58,8 +58,8 @@ export function Sandbox() {
                     </button>
                 </div>
                 <div className="flex flex-wrap items-center gap-4">
-                    <div className="flex items-center gap-2 bg-[#5b21b6] px-3 py-1.5 rounded-md border border-zinc-700" title="步骤执行间隔">
-                        <Gauge className="w-4 h-4 text-zinc-500" />
+                    <div className="flex items-center gap-2 bg-zinc-50 px-3 py-1.5 rounded-md border border-zinc-200" title="步骤执行间隔">
+                        <Gauge className="w-4 h-4 text-zinc-400" />
                         <input 
                             type="range" 
                             min="0" max="3000" step="100" 
@@ -67,9 +67,9 @@ export function Sandbox() {
                             onChange={(e) => setSpeed(parseInt(e.target.value))}
                             className="w-24 accent-violet-600 cursor-ew-resize" 
                         />
-                        <span className="text-xs text-zinc-400 font-mono w-9 text-right">{(speed / 1000).toFixed(1)}s</span>
+                        <span className="text-xs text-zinc-500 font-mono w-9 text-right">{(speed / 1000).toFixed(1)}s</span>
                     </div>
-                    <div className="h-5 w-px bg-zinc-800 hidden xl:block"></div>
+                    <div className="h-5 w-px bg-zinc-200 hidden xl:block"></div>
                     <div className="flex gap-2">
                         <button 
                             onClick={() => {
@@ -77,14 +77,14 @@ export function Sandbox() {
                                 addLog('用户手动终止执行', 'error');
                             }}
                             disabled={!isRunning || shouldStop}
-                            className="flex items-center justify-center p-2 text-red-500 bg-red-900/20 hover:bg-red-900/40 rounded-md disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
+                            className="flex items-center justify-center p-2 text-red-600 bg-red-50 hover:bg-red-100 rounded-md disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
                             title="停止运行"
                         >
                             <SquareSquare className="w-4 h-4" />
                         </button>
                         <button 
                             onClick={() => document.getElementById('report-drawer')?.classList.remove('translate-x-full')}
-                            className="flex items-center justify-center px-3 py-2 text-sm font-medium text-zinc-900 bg-zinc-100 hover:bg-white rounded-md shadow-sm transition-colors" 
+                            className="flex items-center justify-center px-3 py-2 text-sm font-medium text-white bg-zinc-900 hover:bg-zinc-800 rounded-md shadow-sm transition-colors" 
                             title="查看测试报告"
                         >
                             <PieChart className="w-4 h-4 mr-1.5" />
@@ -95,17 +95,17 @@ export function Sandbox() {
             </div>
 
             {/* Iframe Sandbox Container */}
-            <div className="flex-1 relative flex items-center justify-center overflow-auto border-b border-zinc-800 shadow-inner p-4 bg-[#5b21b6]"
-                 style={{ backgroundImage: 'radial-gradient(#5b21b6 1px, transparent 1px)', backgroundSize: '20px 20px' }}>
+            <div className="flex-1 relative flex items-center justify-center overflow-auto border-b border-zinc-300 shadow-inner p-4 bg-[#f0f0f0]"
+                 style={{ backgroundImage: 'radial-gradient(#d4d4d8 1px, transparent 1px)', backgroundSize: '20px 20px' }}>
                 <div 
-                    className="relative bg-white shadow-2xl transition-all duration-300 rounded-sm overflow-hidden border border-zinc-800"
+                    className="relative bg-white shadow-2xl transition-all duration-300 rounded-sm overflow-hidden border border-zinc-200"
                     style={{
                         width: sandboxSize === '100%' ? '100%' : sandboxSize.split('x')[0] + 'px',
                         height: sandboxSize === '100%' ? '100%' : sandboxSize.split('x')[1] + 'px'
                     }}
                 >
                     {pickingMode && (
-                        <div className="absolute inset-0 bg-violet-600/20 z-50 cursor-crosshair backdrop-blur-[1px]" />
+                        <div className="absolute inset-0 bg-violet-600/10 z-50 cursor-crosshair backdrop-blur-[1px]" />
                     )}
                     <iframe 
                         id="test-sandbox" 
@@ -116,10 +116,10 @@ export function Sandbox() {
             </div>
 
             {/* Logs Panel */}
-            <div className="h-64 bg-violet-950 flex flex-col font-mono text-sm shrink-0">
-                <div className="h-9 bg-[#4c1d95] border-b border-zinc-900 flex items-center justify-between px-4 text-zinc-500 text-xs select-none">
+            <div className="h-64 bg-zinc-950 flex flex-col font-mono text-sm shrink-0">
+                <div className="h-9 bg-zinc-900 border-b border-zinc-800 flex items-center justify-between px-4 text-zinc-400 text-xs select-none">
                     <span className="flex items-center tracking-wider"><Terminal className="w-3.5 h-3.5 mr-2" />TERMINAL</span>
-                    <button onClick={clearLogs} className="hover:text-zinc-300 transition-colors flex items-center" title="清空日志">
+                    <button onClick={clearLogs} className="hover:text-zinc-100 transition-colors flex items-center" title="清空日志">
                         <Eraser className="w-3 h-3 mr-1" /> Clear
                     </button>
                 </div>
