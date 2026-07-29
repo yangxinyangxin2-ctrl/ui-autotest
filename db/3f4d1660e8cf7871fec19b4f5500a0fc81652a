@@ -1,0 +1,66 @@
+.github/workflows/nextjs.yml
+  s_44cb441e2b1150::t_2bbd0e939893eb 1-67 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a69b376b307804a98ff1338","tool_type":"agent","tool_id":"Write","line_ranges":[{"Range":[1,67]}]}]}
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "db3f4d1660e8cf7871fec19b4f5500a0fc81652a",
+  "prompts": {},
+  "sessions": {
+    "s_44cb441e2b1150": {
+      "agent_id": {
+        "tool": "trae",
+        "id": "6a69a95fb307804a98ff1181",
+        "model": "gemini-3.1-pro__dev"
+      },
+      "human_author": "yangxin <yangxin.feiu@bytedance.com>"
+    }
+  },
+  "attestation_metadata": {
+    ".github/workflows/nextjs.yml": [
+      {
+        "hash": "s_44cb441e2b1150::t_2bbd0e939893eb",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              67
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a69b376b307804a98ff1338",
+            "tool_type": "agent",
+            "tool_id": "Write",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  67
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "remote_transcripts": {
+    "s_44cb441e2b1150": {
+      "tool": "trae",
+      "conversation_id": "6a69a95fb307804a98ff1181",
+      "session_id": "6a69a95fb307804a98ff1181",
+      "status": "remote_only",
+      "message": "Remote transcript resolution is not implemented yet for TRAE prompts."
+    },
+    "s_44cb441e2b1150::t_2bbd0e939893eb": {
+      "tool": "trae",
+      "conversation_id": "6a69a95fb307804a98ff1181",
+      "session_id": "6a69a95fb307804a98ff1181",
+      "status": "remote_only",
+      "message": "Remote transcript resolution is not implemented yet for TRAE prompts."
+    }
+  }
+}
