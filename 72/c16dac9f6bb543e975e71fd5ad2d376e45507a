@@ -1,0 +1,762 @@
+src/components/Sidebar.tsx
+  s_44cb441e2b1150::t_1d99753a6a80e3 63,65,69,73,77,84,94,102-103,107-108,114,121,134-135,138,142 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a69b7d6b307804a98ff138c","tool_type":"agent","tool_id":"SearchReplace","line_ranges":[{"Single":63},{"Single":65},{"Single":69},{"Single":73},{"Single":77},{"Single":84},{"Single":94},{"Range":[102,103]},{"Range":[107,108]},{"Single":114},{"Single":121},{"Range":[134,135]},{"Single":138},{"Single":142}]}]}
+src/app/globals.css
+  s_44cb441e2b1150::t_d787805953f94d 4-5,32,36 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a69b7b9b307804a98ff1386","tool_type":"agent","tool_id":"SearchReplace","line_ranges":[{"Range":[4,5]},{"Single":32},{"Single":36}]}]}
+src/app/page.tsx
+  s_44cb441e2b1150::t_9851e089fc0008 11 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a69b7c7b307804a98ff1389","tool_type":"agent","tool_id":"SearchReplace","line_ranges":[{"Single":11}]}]}
+src/components/Editor.tsx
+  s_44cb441e2b1150::t_0d55f8755ca049 28-31,39,41,43,49,56,65,74,94,96,102-103,107,122,137,141,149 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a69b7f1b307804a98ff138f","tool_type":"agent","tool_id":"SearchReplace","line_ranges":[{"Range":[28,31]},{"Single":39},{"Single":41},{"Single":43},{"Single":49},{"Single":56},{"Single":65},{"Single":74},{"Single":94},{"Single":96},{"Range":[102,103]},{"Single":107},{"Single":122},{"Single":137},{"Single":141},{"Single":149}]}]}
+src/components/Sandbox.tsx
+  s_44cb441e2b1150::t_04bba0cb5e3197 33,35,37,43,53,61-62,70,72,80,87,98-99,101,108,119-120,122 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a69b819b307804a98ff1392","tool_type":"agent","tool_id":"SearchReplace","line_ranges":[{"Single":33},{"Single":35},{"Single":37},{"Single":43},{"Single":53},{"Range":[61,62]},{"Single":70},{"Single":72},{"Single":80},{"Single":87},{"Range":[98,99]},{"Single":101},{"Single":108},{"Range":[119,120]},{"Single":122}]}]}
+src/components/ReportDrawer.tsx
+  s_44cb441e2b1150::t_bc9114019d9848 29-32,34,39-40,42,44-46,48-50,52-54,60,63,66,68,72,74,76-77,87-88 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a69b837b307804a98ff1395","tool_type":"agent","tool_id":"SearchReplace","line_ranges":[{"Range":[29,32]},{"Single":34},{"Range":[39,40]},{"Single":42},{"Range":[44,46]},{"Range":[48,50]},{"Range":[52,54]},{"Single":60},{"Single":63},{"Single":66},{"Single":68},{"Single":72},{"Single":74},{"Range":[76,77]},{"Range":[87,88]}]}]}
+src/components/GuideModal.tsx
+  s_44cb441e2b1150::t_70be6d5c7ffe44 18-21,26,28,32,37,41-42,46,50,55,58 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a69b853b307804a98ff1398","tool_type":"agent","tool_id":"SearchReplace","line_ranges":[{"Range":[18,21]},{"Single":26},{"Single":28},{"Single":32},{"Single":37},{"Range":[41,42]},{"Single":46},{"Single":50},{"Single":55},{"Single":58}]}]}
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "72c16dac9f6bb543e975e71fd5ad2d376e45507a",
+  "prompts": {},
+  "sessions": {
+    "s_44cb441e2b1150": {
+      "agent_id": {
+        "tool": "trae",
+        "id": "6a69a95fb307804a98ff1181",
+        "model": "gemini-3.1-pro__dev"
+      },
+      "human_author": "yangxin <yangxin.feiu@bytedance.com>"
+    }
+  },
+  "attestation_metadata": {
+    "src/app/globals.css": [
+      {
+        "hash": "s_44cb441e2b1150::t_d787805953f94d",
+        "line_ranges": [
+          {
+            "Range": [
+              4,
+              5
+            ]
+          },
+          {
+            "Single": 32
+          },
+          {
+            "Single": 36
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a69b7b9b307804a98ff1386",
+            "tool_type": "agent",
+            "tool_id": "SearchReplace",
+            "line_ranges": [
+              {
+                "Range": [
+                  4,
+                  5
+                ]
+              },
+              {
+                "Single": 32
+              },
+              {
+                "Single": 36
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "src/app/page.tsx": [
+      {
+        "hash": "s_44cb441e2b1150::t_9851e089fc0008",
+        "line_ranges": [
+          {
+            "Single": 11
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a69b7c7b307804a98ff1389",
+            "tool_type": "agent",
+            "tool_id": "SearchReplace",
+            "line_ranges": [
+              {
+                "Single": 11
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "src/components/Editor.tsx": [
+      {
+        "hash": "s_44cb441e2b1150::t_0d55f8755ca049",
+        "line_ranges": [
+          {
+            "Range": [
+              28,
+              31
+            ]
+          },
+          {
+            "Single": 39
+          },
+          {
+            "Single": 41
+          },
+          {
+            "Single": 43
+          },
+          {
+            "Single": 49
+          },
+          {
+            "Single": 56
+          },
+          {
+            "Single": 65
+          },
+          {
+            "Single": 74
+          },
+          {
+            "Single": 94
+          },
+          {
+            "Single": 96
+          },
+          {
+            "Range": [
+              102,
+              103
+            ]
+          },
+          {
+            "Single": 107
+          },
+          {
+            "Single": 122
+          },
+          {
+            "Single": 137
+          },
+          {
+            "Single": 141
+          },
+          {
+            "Single": 149
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a69b7f1b307804a98ff138f",
+            "tool_type": "agent",
+            "tool_id": "SearchReplace",
+            "line_ranges": [
+              {
+                "Range": [
+                  28,
+                  31
+                ]
+              },
+              {
+                "Single": 39
+              },
+              {
+                "Single": 41
+              },
+              {
+                "Single": 43
+              },
+              {
+                "Single": 49
+              },
+              {
+                "Single": 56
+              },
+              {
+                "Single": 65
+              },
+              {
+                "Single": 74
+              },
+              {
+                "Single": 94
+              },
+              {
+                "Single": 96
+              },
+              {
+                "Range": [
+                  102,
+                  103
+                ]
+              },
+              {
+                "Single": 107
+              },
+              {
+                "Single": 122
+              },
+              {
+                "Single": 137
+              },
+              {
+                "Single": 141
+              },
+              {
+                "Single": 149
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "src/components/GuideModal.tsx": [
+      {
+        "hash": "s_44cb441e2b1150::t_70be6d5c7ffe44",
+        "line_ranges": [
+          {
+            "Range": [
+              18,
+              21
+            ]
+          },
+          {
+            "Single": 26
+          },
+          {
+            "Single": 28
+          },
+          {
+            "Single": 32
+          },
+          {
+            "Single": 37
+          },
+          {
+            "Range": [
+              41,
+              42
+            ]
+          },
+          {
+            "Single": 46
+          },
+          {
+            "Single": 50
+          },
+          {
+            "Single": 55
+          },
+          {
+            "Single": 58
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a69b853b307804a98ff1398",
+            "tool_type": "agent",
+            "tool_id": "SearchReplace",
+            "line_ranges": [
+              {
+                "Range": [
+                  18,
+                  21
+                ]
+              },
+              {
+                "Single": 26
+              },
+              {
+                "Single": 28
+              },
+              {
+                "Single": 32
+              },
+              {
+                "Single": 37
+              },
+              {
+                "Range": [
+                  41,
+                  42
+                ]
+              },
+              {
+                "Single": 46
+              },
+              {
+                "Single": 50
+              },
+              {
+                "Single": 55
+              },
+              {
+                "Single": 58
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "src/components/ReportDrawer.tsx": [
+      {
+        "hash": "s_44cb441e2b1150::t_bc9114019d9848",
+        "line_ranges": [
+          {
+            "Range": [
+              29,
+              32
+            ]
+          },
+          {
+            "Single": 34
+          },
+          {
+            "Range": [
+              39,
+              40
+            ]
+          },
+          {
+            "Single": 42
+          },
+          {
+            "Range": [
+              44,
+              46
+            ]
+          },
+          {
+            "Range": [
+              48,
+              50
+            ]
+          },
+          {
+            "Range": [
+              52,
+              54
+            ]
+          },
+          {
+            "Single": 60
+          },
+          {
+            "Single": 63
+          },
+          {
+            "Single": 66
+          },
+          {
+            "Single": 68
+          },
+          {
+            "Single": 72
+          },
+          {
+            "Single": 74
+          },
+          {
+            "Range": [
+              76,
+              77
+            ]
+          },
+          {
+            "Range": [
+              87,
+              88
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a69b837b307804a98ff1395",
+            "tool_type": "agent",
+            "tool_id": "SearchReplace",
+            "line_ranges": [
+              {
+                "Range": [
+                  29,
+                  32
+                ]
+              },
+              {
+                "Single": 34
+              },
+              {
+                "Range": [
+                  39,
+                  40
+                ]
+              },
+              {
+                "Single": 42
+              },
+              {
+                "Range": [
+                  44,
+                  46
+                ]
+              },
+              {
+                "Range": [
+                  48,
+                  50
+                ]
+              },
+              {
+                "Range": [
+                  52,
+                  54
+                ]
+              },
+              {
+                "Single": 60
+              },
+              {
+                "Single": 63
+              },
+              {
+                "Single": 66
+              },
+              {
+                "Single": 68
+              },
+              {
+                "Single": 72
+              },
+              {
+                "Single": 74
+              },
+              {
+                "Range": [
+                  76,
+                  77
+                ]
+              },
+              {
+                "Range": [
+                  87,
+                  88
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "src/components/Sandbox.tsx": [
+      {
+        "hash": "s_44cb441e2b1150::t_04bba0cb5e3197",
+        "line_ranges": [
+          {
+            "Single": 33
+          },
+          {
+            "Single": 35
+          },
+          {
+            "Single": 37
+          },
+          {
+            "Single": 43
+          },
+          {
+            "Single": 53
+          },
+          {
+            "Range": [
+              61,
+              62
+            ]
+          },
+          {
+            "Single": 70
+          },
+          {
+            "Single": 72
+          },
+          {
+            "Single": 80
+          },
+          {
+            "Single": 87
+          },
+          {
+            "Range": [
+              98,
+              99
+            ]
+          },
+          {
+            "Single": 101
+          },
+          {
+            "Single": 108
+          },
+          {
+            "Range": [
+              119,
+              120
+            ]
+          },
+          {
+            "Single": 122
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a69b819b307804a98ff1392",
+            "tool_type": "agent",
+            "tool_id": "SearchReplace",
+            "line_ranges": [
+              {
+                "Single": 33
+              },
+              {
+                "Single": 35
+              },
+              {
+                "Single": 37
+              },
+              {
+                "Single": 43
+              },
+              {
+                "Single": 53
+              },
+              {
+                "Range": [
+                  61,
+                  62
+                ]
+              },
+              {
+                "Single": 70
+              },
+              {
+                "Single": 72
+              },
+              {
+                "Single": 80
+              },
+              {
+                "Single": 87
+              },
+              {
+                "Range": [
+                  98,
+                  99
+                ]
+              },
+              {
+                "Single": 101
+              },
+              {
+                "Single": 108
+              },
+              {
+                "Range": [
+                  119,
+                  120
+                ]
+              },
+              {
+                "Single": 122
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "src/components/Sidebar.tsx": [
+      {
+        "hash": "s_44cb441e2b1150::t_1d99753a6a80e3",
+        "line_ranges": [
+          {
+            "Single": 63
+          },
+          {
+            "Single": 65
+          },
+          {
+            "Single": 69
+          },
+          {
+            "Single": 73
+          },
+          {
+            "Single": 77
+          },
+          {
+            "Single": 84
+          },
+          {
+            "Single": 94
+          },
+          {
+            "Range": [
+              102,
+              103
+            ]
+          },
+          {
+            "Range": [
+              107,
+              108
+            ]
+          },
+          {
+            "Single": 114
+          },
+          {
+            "Single": 121
+          },
+          {
+            "Range": [
+              134,
+              135
+            ]
+          },
+          {
+            "Single": 138
+          },
+          {
+            "Single": 142
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a69b7d6b307804a98ff138c",
+            "tool_type": "agent",
+            "tool_id": "SearchReplace",
+            "line_ranges": [
+              {
+                "Single": 63
+              },
+              {
+                "Single": 65
+              },
+              {
+                "Single": 69
+              },
+              {
+                "Single": 73
+              },
+              {
+                "Single": 77
+              },
+              {
+                "Single": 84
+              },
+              {
+                "Single": 94
+              },
+              {
+                "Range": [
+                  102,
+                  103
+                ]
+              },
+              {
+                "Range": [
+                  107,
+                  108
+                ]
+              },
+              {
+                "Single": 114
+              },
+              {
+                "Single": 121
+              },
+              {
+                "Range": [
+                  134,
+                  135
+                ]
+              },
+              {
+                "Single": 138
+              },
+              {
+                "Single": 142
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "remote_transcripts": {
+    "s_44cb441e2b1150": {
+      "tool": "trae",
+      "conversation_id": "6a69a95fb307804a98ff1181",
+      "session_id": "6a69a95fb307804a98ff1181",
+      "status": "remote_only",
+      "message": "Remote transcript resolution is not implemented yet for TRAE prompts."
+    },
+    "s_44cb441e2b1150::t_04bba0cb5e3197": {
+      "tool": "trae",
+      "conversation_id": "6a69a95fb307804a98ff1181",
+      "session_id": "6a69a95fb307804a98ff1181",
+      "status": "remote_only",
+      "message": "Remote transcript resolution is not implemented yet for TRAE prompts."
+    },
+    "s_44cb441e2b1150::t_0d55f8755ca049": {
+      "tool": "trae",
+      "conversation_id": "6a69a95fb307804a98ff1181",
+      "session_id": "6a69a95fb307804a98ff1181",
+      "status": "remote_only",
+      "message": "Remote transcript resolution is not implemented yet for TRAE prompts."
+    },
+    "s_44cb441e2b1150::t_1d99753a6a80e3": {
+      "tool": "trae",
+      "conversation_id": "6a69a95fb307804a98ff1181",
+      "session_id": "6a69a95fb307804a98ff1181",
+      "status": "remote_only",
+      "message": "Remote transcript resolution is not implemented yet for TRAE prompts."
+    },
+    "s_44cb441e2b1150::t_70be6d5c7ffe44": {
+      "tool": "trae",
+      "conversation_id": "6a69a95fb307804a98ff1181",
+      "session_id": "6a69a95fb307804a98ff1181",
+      "status": "remote_only",
+      "message": "Remote transcript resolution is not implemented yet for TRAE prompts."
+    },
+    "s_44cb441e2b1150::t_9851e089fc0008": {
+      "tool": "trae",
+      "conversation_id": "6a69a95fb307804a98ff1181",
+      "session_id": "6a69a95fb307804a98ff1181",
+      "status": "remote_only",
+      "message": "Remote transcript resolution is not implemented yet for TRAE prompts."
+    },
+    "s_44cb441e2b1150::t_bc9114019d9848": {
+      "tool": "trae",
+      "conversation_id": "6a69a95fb307804a98ff1181",
+      "session_id": "6a69a95fb307804a98ff1181",
+      "status": "remote_only",
+      "message": "Remote transcript resolution is not implemented yet for TRAE prompts."
+    },
+    "s_44cb441e2b1150::t_d787805953f94d": {
+      "tool": "trae",
+      "conversation_id": "6a69a95fb307804a98ff1181",
+      "session_id": "6a69a95fb307804a98ff1181",
+      "status": "remote_only",
+      "message": "Remote transcript resolution is not implemented yet for TRAE prompts."
+    }
+  }
+}
