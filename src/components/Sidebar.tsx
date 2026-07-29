@@ -60,28 +60,28 @@ export function Sidebar() {
     };
 
     return (
-        <aside className="w-72 flex-shrink-0 bg-white flex flex-col border-r border-zinc-200 z-10 shadow-sm relative">
+        <aside className="w-72 flex-shrink-0 bg-[#0a0a0a] flex flex-col border-r border-zinc-800 z-10 shadow-sm relative">
             {/* Logo & Header */}
-            <div className="min-h-[64px] flex-shrink-0 flex items-center px-6 border-b border-zinc-200">
+            <div className="min-h-[64px] flex-shrink-0 flex items-center px-6 border-b border-zinc-800">
                 <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-violet-600 text-white mr-3 shadow-sm shrink-0">
                     <TestTube2 className="w-4 h-4" />
                 </div>
-                <span className="font-bold text-zinc-900 tracking-tight text-lg truncate">AutoTest</span>
+                <span className="font-bold text-zinc-100 tracking-tight text-lg truncate">AutoTest</span>
             </div>
 
             {/* Controls */}
-            <div className="p-4 border-b border-zinc-100 flex gap-2 shrink-0 bg-zinc-50/50">
+            <div className="p-4 border-b border-zinc-800 flex gap-2 shrink-0 bg-[#0a0a0a]">
                 <button
                     onClick={addCase}
                     disabled={isRunning}
-                    className="flex-1 flex items-center justify-center bg-zinc-900 hover:bg-zinc-800 disabled:opacity-50 text-white text-sm py-2 px-3 rounded-lg shadow-sm transition-all active:scale-95"
+                    className="flex-1 flex items-center justify-center bg-zinc-800 hover:bg-zinc-700 disabled:opacity-50 text-white text-sm py-2 px-3 rounded-lg shadow-sm transition-all active:scale-95"
                 >
                     <Plus className="w-4 h-4 mr-1.5" /> 新建用例
                 </button>
                 <button
                     onClick={runAllCases}
                     disabled={isRunning}
-                    className="flex items-center justify-center bg-violet-100 text-violet-700 hover:bg-violet-200 disabled:opacity-50 text-sm py-2 px-3 rounded-lg shadow-sm transition-all active:scale-95 shrink-0"
+                    className="flex items-center justify-center bg-violet-900/30 text-violet-400 hover:bg-violet-900/50 disabled:opacity-50 text-sm py-2 px-3 rounded-lg shadow-sm transition-all active:scale-95 shrink-0"
                     title="批量运行全部"
                 >
                     <Play className="w-4 h-4" />
@@ -91,7 +91,7 @@ export function Sidebar() {
             {/* Case List */}
             <div className="flex-1 overflow-y-auto p-3 no-scrollbar space-y-1">
                 {cases.length === 0 ? (
-                    <div className="text-zinc-400 text-sm text-center mt-6">暂无用例，请新建</div>
+                    <div className="text-zinc-500 text-sm text-center mt-6">暂无用例，请新建</div>
                 ) : (
                     cases.map((tc) => (
                         <div
@@ -99,26 +99,26 @@ export function Sidebar() {
                             onClick={() => setCurrentCase(tc.id)}
                             className={`p-2.5 rounded-lg cursor-pointer flex items-center justify-between group transition-all border ${
                                 currentCaseId === tc.id 
-                                ? 'bg-violet-50 border-violet-200 shadow-sm' 
-                                : 'bg-transparent border-transparent hover:bg-zinc-100'
+                                ? 'bg-violet-900/20 border-violet-500/30 shadow-sm' 
+                                : 'bg-transparent border-transparent hover:bg-zinc-800/50'
                             }`}
                         >
                             <div className="flex items-center truncate flex-1 min-w-0 pr-2">
-                                <FileCode2 className={`w-4 h-4 mr-2.5 shrink-0 ${currentCaseId === tc.id ? 'text-violet-600' : 'text-zinc-400'}`} />
-                                <span className={`text-sm truncate ${currentCaseId === tc.id ? 'font-medium text-violet-900' : 'text-zinc-600'}`} title={tc.name}>
+                                <FileCode2 className={`w-4 h-4 mr-2.5 shrink-0 ${currentCaseId === tc.id ? 'text-violet-400' : 'text-zinc-400'}`} />
+                                <span className={`text-sm truncate ${currentCaseId === tc.id ? 'font-medium text-violet-200' : 'text-zinc-400 group-hover:text-zinc-300'}`} title={tc.name}>
                                     {tc.name}
                                 </span>
                             </div>
                             <div className={`flex gap-1 shrink-0 transition-opacity ${currentCaseId === tc.id ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`}>
                                 <button
-                                    className="p-1.5 text-zinc-400 hover:text-green-600 hover:bg-green-50 rounded-md transition-colors"
+                                    className="p-1.5 text-zinc-400 hover:text-green-400 hover:bg-green-900/30 rounded-md transition-colors"
                                     onClick={(e) => runSingleCase(tc.id, e)}
                                     title="运行"
                                 >
                                     <Play className="w-3.5 h-3.5" />
                                 </button>
                                 <button
-                                    className="p-1.5 text-zinc-400 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors"
+                                    className="p-1.5 text-zinc-400 hover:text-blue-400 hover:bg-blue-900/30 rounded-md transition-colors"
                                     onClick={(e) => { e.stopPropagation(); copyCase(tc.id); }}
                                     title="复制"
                                 >
@@ -131,15 +131,15 @@ export function Sidebar() {
             </div>
 
             {/* Footer Actions */}
-            <div className="p-4 border-t border-zinc-200 bg-zinc-50/80 text-xs flex justify-between shrink-0">
-                <button onClick={handleExport} className="flex items-center text-zinc-500 hover:text-zinc-900 font-medium transition-colors">
+            <div className="p-4 border-t border-zinc-800 bg-[#0a0a0a] text-xs flex justify-between shrink-0">
+                <button onClick={handleExport} className="flex items-center text-zinc-400 hover:text-zinc-100 font-medium transition-colors">
                     <Download className="w-3.5 h-3.5 mr-1.5" /> 导出
                 </button>
-                <button onClick={() => fileInputRef.current?.click()} className="flex items-center text-zinc-500 hover:text-zinc-900 font-medium transition-colors">
+                <button onClick={() => fileInputRef.current?.click()} className="flex items-center text-zinc-400 hover:text-zinc-100 font-medium transition-colors">
                     <Upload className="w-3.5 h-3.5 mr-1.5" /> 导入
                 </button>
                 <input type="file" ref={fileInputRef} onChange={handleImport} className="hidden" accept=".json" />
-                <button onClick={handleClearAll} className="flex items-center text-red-500 hover:text-red-700 font-medium transition-colors">
+                <button onClick={handleClearAll} className="flex items-center text-red-500/80 hover:text-red-400 font-medium transition-colors">
                     <Trash2 className="w-3.5 h-3.5 mr-1.5" /> 清空
                 </button>
             </div>

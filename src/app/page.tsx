@@ -8,7 +8,7 @@ import { GuideModal } from '@/components/GuideModal';
 
 export default function Home() {
   return (
-    <div className="h-screen w-screen overflow-hidden flex bg-zinc-50 text-zinc-900 font-sans selection:bg-violet-200">
+    <div className="h-screen w-screen overflow-hidden flex bg-black text-zinc-100 font-sans selection:bg-violet-500/30">
       <Sidebar />
       <Editor />
       <Sandbox />
