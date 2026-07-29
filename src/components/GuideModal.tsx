@@ -15,15 +15,15 @@ export function GuideModal() {
     if (!mounted || guideShown) return null;
 
     return (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-sm p-4">
-            <div className="bg-[#0a0a0a] rounded-2xl shadow-2xl max-w-lg w-full overflow-hidden transform transition-all duration-300 border border-zinc-800">
-                <div className="bg-[#111111] p-8 text-white text-center relative overflow-hidden">
+        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-zinc-950/80 backdrop-blur-sm p-4">
+            <div className="bg-[#18181b] rounded-2xl shadow-2xl max-w-lg w-full overflow-hidden transform transition-all duration-300 border border-zinc-800">
+                <div className="bg-[#27272a] p-8 text-white text-center relative overflow-hidden">
                     <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-zinc-500 via-transparent to-transparent"></div>
                     <Rocket className="w-12 h-12 mx-auto mb-5 text-violet-400 relative z-10" />
                     <h2 className="text-2xl font-bold tracking-tight relative z-10">欢迎使用 AutoTest</h2>
                     <p className="mt-2 text-zinc-400 text-sm relative z-10">基于 Next.js 的纯前端 UI 自动化测试框架</p>
                 </div>
-                <div className="p-6 sm:p-8 space-y-6 text-zinc-400 bg-[#0a0a0a]">
+                <div className="p-6 sm:p-8 space-y-6 text-zinc-400 bg-[#18181b]">
                     <div className="flex items-start gap-4">
                         <div className="bg-violet-900/20 text-violet-400 w-10 h-10 rounded-full flex items-center justify-center shrink-0 shadow-sm border border-violet-900/50">
                             <MousePointerClick className="w-5 h-5" />
@@ -52,7 +52,7 @@ export function GuideModal() {
                         </div>
                     </div>
                 </div>
-                <div className="p-6 bg-[#111111] border-t border-zinc-800 text-center">
+                <div className="p-6 bg-[#27272a] border-t border-zinc-800 text-center">
                     <button 
                         onClick={() => setGuideShown(true)} 
                         className="bg-violet-600 hover:bg-violet-500 text-white px-8 py-3 rounded-xl font-semibold shadow-md transition-all w-full active:scale-[0.98]"

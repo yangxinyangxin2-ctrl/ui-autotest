@@ -26,8 +26,8 @@ export function ReportDrawer() {
     const latest = reports[0];
 
     return (
-        <div id="report-drawer" className="fixed inset-y-0 right-0 w-full max-w-2xl bg-[#0a0a0a] shadow-2xl transform translate-x-full transition-transform duration-300 z-50 flex flex-col border-l border-zinc-800">
-            <div className="min-h-[64px] border-b border-zinc-800 flex items-center justify-between px-6 bg-[#0a0a0a] shrink-0">
+        <div id="report-drawer" className="fixed inset-y-0 right-0 w-full max-w-2xl bg-[#18181b] shadow-2xl transform translate-x-full transition-transform duration-300 z-50 flex flex-col border-l border-zinc-800">
+            <div className="min-h-[64px] border-b border-zinc-800 flex items-center justify-between px-6 bg-[#18181b] shrink-0">
                 <h2 className="text-lg font-bold text-zinc-100 flex items-center tracking-tight">
                     <LineChart className="w-5 h-5 text-violet-500 mr-2" /> 测试报告
                 </h2>
@@ -36,8 +36,8 @@ export function ReportDrawer() {
                 </button>
             </div>
             
-            <div className="p-6 border-b border-zinc-800 flex flex-wrap gap-4 bg-[#111111] shrink-0">
-                <div className="flex-1 min-w-[100px] bg-[#1a1a1a] rounded-xl p-4 text-center border border-zinc-800 shadow-sm">
+            <div className="p-6 border-b border-zinc-800 flex flex-wrap gap-4 bg-[#27272a] shrink-0">
+                <div className="flex-1 min-w-[100px] bg-[#3f3f46] rounded-xl p-4 text-center border border-zinc-800 shadow-sm">
                     <div className="text-zinc-500 text-sm mb-1 font-medium">总用例数</div>
                     <div className="text-3xl font-bold text-zinc-200">{latest?.total || 0}</div>
                 </div>
@@ -57,13 +57,13 @@ export function ReportDrawer() {
                 </div>
             </div>
 
-            <div className="flex-1 overflow-y-auto p-6 bg-[#0a0a0a]">
+            <div className="flex-1 overflow-y-auto p-6 bg-[#18181b]">
                 <div className="space-y-4">
                     {!latest || latest.results.length === 0 ? (
                         <div className="text-center text-zinc-600 mt-10 text-sm">暂无报告数据</div>
                     ) : (
                         latest.results.map((res, idx) => (
-                            <div key={idx} className={`bg-[#111111] border ${res.success ? 'border-emerald-900/50' : 'border-rose-900/50'} rounded-xl p-5 shadow-sm transition-all hover:shadow-md`}>
+                            <div key={idx} className={`bg-[#27272a] border ${res.success ? 'border-emerald-900/50' : 'border-rose-900/50'} rounded-xl p-5 shadow-sm transition-all hover:shadow-md`}>
                                 <div className="flex justify-between items-center mb-3">
                                     <div className="font-semibold text-zinc-200 flex items-center">
                                         {res.success ? <CheckCircle2 className="w-5 h-5 text-emerald-500 mr-2 shrink-0" /> : <XCircle className="w-5 h-5 text-rose-500 mr-2 shrink-0" />}
@@ -73,7 +73,7 @@ export function ReportDrawer() {
                                 </div>
                                 {res.errorMsg && <div className="text-sm text-rose-400 bg-rose-950/30 border border-rose-900/50 p-3 rounded-lg mt-2 font-mono leading-relaxed">{res.errorMsg}</div>}
                                 {res.screenshot && (
-                                    <div className="mt-4 border border-zinc-800 rounded-lg overflow-hidden bg-black">
+                                    <div className="mt-4 border border-zinc-800 rounded-lg overflow-hidden bg-zinc-950">
                                         <div className="bg-zinc-900 text-xs px-3 py-2 border-b border-zinc-800 text-zinc-500 font-medium">错误截图</div>
                                         <img src={res.screenshot} alt="Error Screenshot" className="w-full h-auto object-contain" />
                                     </div>
@@ -84,7 +84,7 @@ export function ReportDrawer() {
                 </div>
             </div>
             
-            <div className="p-4 border-t border-zinc-800 bg-[#0a0a0a] text-right shrink-0">
+            <div className="p-4 border-t border-zinc-800 bg-[#18181b] text-right shrink-0">
                 <button onClick={handleDownload} className="bg-zinc-800 hover:bg-zinc-700 text-white px-5 py-2.5 rounded-lg text-sm font-medium shadow-sm transition-all flex items-center ml-auto active:scale-95">
                     <Download className="w-4 h-4 mr-2" /> 下载完整报告 (JSON)
                 </button>

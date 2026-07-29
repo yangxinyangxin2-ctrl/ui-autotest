@@ -25,9 +25,9 @@ export function Editor() {
 
     if (!tc) {
         return (
-            <main className="w-2/5 min-w-[400px] flex flex-col border-r border-zinc-800 bg-[#0a0a0a] z-0">
-                <div className="min-h-[64px] flex items-center px-6 border-b border-zinc-800 bg-[#0a0a0a]" />
-                <div className="flex-1 flex flex-col items-center justify-center text-zinc-500 bg-[#0a0a0a]">
+            <main className="w-2/5 min-w-[400px] flex flex-col border-r border-zinc-800 bg-[#18181b] z-0">
+                <div className="min-h-[64px] flex items-center px-6 border-b border-zinc-800 bg-[#18181b]" />
+                <div className="flex-1 flex flex-col items-center justify-center text-zinc-500 bg-[#18181b]">
                     <Pointer className="w-12 h-12 mb-4 opacity-30 text-zinc-600" />
                     <p className="text-sm font-medium">在左侧选择一个用例或新建用例</p>
                 </div>
@@ -36,9 +36,9 @@ export function Editor() {
     }
 
     return (
-        <main className="w-2/5 min-w-[400px] flex flex-col border-r border-zinc-800 bg-[#0a0a0a] z-0">
+        <main className="w-2/5 min-w-[400px] flex flex-col border-r border-zinc-800 bg-[#18181b] z-0">
             {/* Editor Header */}
-            <div className="min-h-[64px] flex-shrink-0 flex items-center justify-between px-6 border-b border-zinc-800 bg-[#0a0a0a]">
+            <div className="min-h-[64px] flex-shrink-0 flex items-center justify-between px-6 border-b border-zinc-800 bg-[#18181b]">
                 <div className="flex-1 flex items-center mr-4 min-w-0">
                     <FileText className="w-5 h-5 text-zinc-500 mr-3 shrink-0" />
                     <input
@@ -91,7 +91,7 @@ export function Editor() {
                         const tpl = STEP_TEMPLATES[step.type];
                         if (!tpl) return null;
                         return (
-                            <div key={step.id} className="group bg-[#111111] border border-zinc-800 rounded-xl shadow-sm p-4 flex flex-col gap-3 relative pl-10 transition-all hover:shadow-md hover:border-violet-500/50">
+                            <div key={step.id} className="group bg-[#27272a] border border-zinc-800 rounded-xl shadow-sm p-4 flex flex-col gap-3 relative pl-10 transition-all hover:shadow-md hover:border-violet-500/50">
                                 {/* Drag handle */}
                                 <div className="drag-handle absolute left-0 top-0 bottom-0 w-8 bg-transparent flex items-center justify-center cursor-move text-zinc-600 hover:text-zinc-400 transition-colors rounded-l-xl">
                                     <GripVertical className="w-4 h-4" />
@@ -119,7 +119,7 @@ export function Editor() {
                                             <input
                                                 key={field}
                                                 type={field === 'delay' ? 'number' : 'text'}
-                                                className="w-full text-sm border border-zinc-700 bg-[#0a0a0a] text-zinc-200 rounded-lg px-3 py-2 outline-none focus:border-violet-500 focus:ring-1 focus:ring-violet-500 transition-all placeholder-zinc-600"
+                                                className="w-full text-sm border border-zinc-700 bg-[#18181b] text-zinc-200 rounded-lg px-3 py-2 outline-none focus:border-violet-500 focus:ring-1 focus:ring-violet-500 transition-all placeholder-zinc-600"
                                                 placeholder={tpl.placeholders[field]}
                                                 value={(step as any)[field] || ''}
                                                 onChange={(e) => updateStep(step.id, field as keyof TestCaseStep, e.target.value)}
@@ -134,11 +134,11 @@ export function Editor() {
             </div>
 
             {/* Add Step Bar */}
-            <div className="p-4 border-t border-zinc-800 bg-[#0a0a0a] flex gap-3 shrink-0">
+            <div className="p-4 border-t border-zinc-800 bg-[#18181b] flex gap-3 shrink-0">
                 <select
                     value={newStepType}
                     onChange={(e) => setNewStepType(e.target.value as TestCaseStep['type'])}
-                    className="flex-1 border border-zinc-700 bg-[#111111] rounded-lg px-3 py-2 text-sm outline-none focus:border-violet-500 focus:ring-1 focus:ring-violet-500 transition-all text-zinc-200"
+                    className="flex-1 border border-zinc-700 bg-[#27272a] rounded-lg px-3 py-2 text-sm outline-none focus:border-violet-500 focus:ring-1 focus:ring-violet-500 transition-all text-zinc-200"
                 >
                     {Object.entries(STEP_TEMPLATES).map(([key, tpl]) => (
                         <option key={key} value={key}>{tpl.icon} {tpl.label}</option>

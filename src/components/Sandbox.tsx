@@ -30,9 +30,9 @@ export function Sandbox() {
     };
 
     return (
-        <section className="flex-1 min-w-[450px] flex flex-col bg-black z-0">
+        <section className="flex-1 min-w-[450px] flex flex-col bg-zinc-950 z-0">
             {/* Top Control Bar */}
-            <div className="p-4 border-b border-zinc-800 bg-[#0a0a0a] flex flex-col xl:flex-row xl:items-center justify-between gap-4 shrink-0 shadow-sm z-10">
+            <div className="p-4 border-b border-zinc-800 bg-[#18181b] flex flex-col xl:flex-row xl:items-center justify-between gap-4 shrink-0 shadow-sm z-10">
                 <div className="flex flex-wrap items-center gap-3">
                     <span className="text-sm font-semibold text-zinc-300 flex items-center shrink-0">
                         <Monitor className="w-4 h-4 mr-1.5" />沙箱
@@ -40,7 +40,7 @@ export function Sandbox() {
                     <select 
                         value={sandboxSize}
                         onChange={(e) => setSandboxSize(e.target.value)}
-                        className="text-xs border border-zinc-700 bg-[#111111] rounded-md px-2.5 py-1.5 outline-none focus:border-violet-500 transition-colors text-zinc-300 cursor-pointer"
+                        className="text-xs border border-zinc-700 bg-[#27272a] rounded-md px-2.5 py-1.5 outline-none focus:border-violet-500 transition-colors text-zinc-300 cursor-pointer"
                     >
                         <option value="100%">自适应 (Responsive)</option>
                         <option value="1920x1080">PC (1920x1080)</option>
@@ -58,7 +58,7 @@ export function Sandbox() {
                     </button>
                 </div>
                 <div className="flex flex-wrap items-center gap-4">
-                    <div className="flex items-center gap-2 bg-[#111111] px-3 py-1.5 rounded-md border border-zinc-700" title="步骤执行间隔">
+                    <div className="flex items-center gap-2 bg-[#27272a] px-3 py-1.5 rounded-md border border-zinc-700" title="步骤执行间隔">
                         <Gauge className="w-4 h-4 text-zinc-500" />
                         <input 
                             type="range" 
@@ -95,7 +95,7 @@ export function Sandbox() {
             </div>
 
             {/* Iframe Sandbox Container */}
-            <div className="flex-1 relative flex items-center justify-center overflow-auto border-b border-zinc-800 shadow-inner p-4 bg-[#111111]"
+            <div className="flex-1 relative flex items-center justify-center overflow-auto border-b border-zinc-800 shadow-inner p-4 bg-[#27272a]"
                  style={{ backgroundImage: 'radial-gradient(#27272a 1px, transparent 1px)', backgroundSize: '20px 20px' }}>
                 <div 
                     className="relative bg-white shadow-2xl transition-all duration-300 rounded-sm overflow-hidden border border-zinc-800"
@@ -116,8 +116,8 @@ export function Sandbox() {
             </div>
 
             {/* Logs Panel */}
-            <div className="h-64 bg-black flex flex-col font-mono text-sm shrink-0">
-                <div className="h-9 bg-[#0a0a0a] border-b border-zinc-900 flex items-center justify-between px-4 text-zinc-500 text-xs select-none">
+            <div className="h-64 bg-zinc-950 flex flex-col font-mono text-sm shrink-0">
+                <div className="h-9 bg-[#18181b] border-b border-zinc-900 flex items-center justify-between px-4 text-zinc-500 text-xs select-none">
                     <span className="flex items-center tracking-wider"><Terminal className="w-3.5 h-3.5 mr-2" />TERMINAL</span>
                     <button onClick={clearLogs} className="hover:text-zinc-300 transition-colors flex items-center" title="清空日志">
                         <Eraser className="w-3 h-3 mr-1" /> Clear
