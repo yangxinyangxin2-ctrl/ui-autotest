@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #09090b;
+  --background: #2e1065;
   --foreground: #fafafa;
 }
 
@@ -29,7 +29,7 @@ body {
     background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-    background: #3f3f46; /* zinc-700 for dark mode */
+    background: #6d28d9; /* zinc-700 for dark mode */
     border-radius: 9999px;
 }
 ::-webkit-scrollbar-thumb:hover {

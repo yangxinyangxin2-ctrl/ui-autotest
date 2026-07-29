@@ -60,7 +60,7 @@ export function Sidebar() {
     };
 
     return (
-        <aside className="w-72 flex-shrink-0 bg-[#18181b] flex flex-col border-r border-zinc-800 z-10 shadow-sm relative">
+        <aside className="w-72 flex-shrink-0 bg-[#4c1d95] flex flex-col border-r border-zinc-800 z-10 shadow-sm relative">
             {/* Logo & Header */}
             <div className="min-h-[64px] flex-shrink-0 flex items-center px-6 border-b border-zinc-800">
                 <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-violet-600 text-white mr-3 shadow-sm shrink-0">
@@ -70,7 +70,7 @@ export function Sidebar() {
             </div>
 
             {/* Controls */}
-            <div className="p-4 border-b border-zinc-800 flex gap-2 shrink-0 bg-[#18181b]">
+            <div className="p-4 border-b border-zinc-800 flex gap-2 shrink-0 bg-[#4c1d95]">
                 <button
                     onClick={addCase}
                     disabled={isRunning}
@@ -131,7 +131,7 @@ export function Sidebar() {
             </div>
 
             {/* Footer Actions */}
-            <div className="p-4 border-t border-zinc-800 bg-[#18181b] text-xs flex justify-between shrink-0">
+            <div className="p-4 border-t border-zinc-800 bg-[#4c1d95] text-xs flex justify-between shrink-0">
                 <button onClick={handleExport} className="flex items-center text-zinc-400 hover:text-zinc-100 font-medium transition-colors">
                     <Download className="w-3.5 h-3.5 mr-1.5" /> 导出
                 </button>
