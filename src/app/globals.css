@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fafafa;
-  --foreground: #09090b;
+  --background: #2e1065;
+  --foreground: #fafafa;
 }
 
 @theme inline {
@@ -29,11 +29,11 @@ body {
     background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-    background: #d4d4d8; /* zinc-300 */
+    background: #6d28d9; /* zinc-700 for dark mode */
     border-radius: 9999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-    background: #a1a1aa; /* zinc-400 */
+    background: #52525b; /* zinc-600 */
 }
 
 /* Hide scrollbar for clean internal panels if needed */
